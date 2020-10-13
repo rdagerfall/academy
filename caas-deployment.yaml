@@ -17,6 +17,12 @@ spec:
     spec:
       containers:
       - name: caas
+        resources:
+          requests:
+            memory: 32Mi
+            cpu: 100m
+          limits:
+            memory: 64Mi
         image: redbridge/caas:2
         imagePullPolicy: IfNotPresent
         ports:
