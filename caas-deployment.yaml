@@ -24,6 +24,26 @@ spec:
           limits:
             memory: 64Mi
         image: redbridge/caas:2
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /count
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 5
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 5
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /count
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 5
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 5
         imagePullPolicy: IfNotPresent
         ports:
         - name: web
