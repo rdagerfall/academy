@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: caas
-        image: redbridge/caas:1
+        image: redbridge/caas:2
         imagePullPolicy: IfNotPresent
         ports:
         - name: web
