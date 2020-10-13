@@ -14,11 +14,11 @@ spec:
     metadata:
       labels:
         app: caas
-spec:
-  containers:
-  - name: caas
-    image: redbridge/caas:1
-    imagePullPolicy: IfNotPresent
-    ports:
-    - name: web
-      containerPort: 8080
+    spec:
+      containers:
+      - name: caas
+        image: redbridge/caas:1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - name: web
+          containerPort: 8080
